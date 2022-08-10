@@ -1,0 +1,35 @@
+{
+  "name": "better-climbing",
+  "version": "1.0.0",
+  "description": "API for app to connect climbers to coaches",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.7.1"
+  },
+  "scripts": {
+    "start": "cross-env PGUSER=postgres PGHOST=localhost PGPASSWORD=docker PGDATABASE=betterClimbing PGPORT=5432 node src/app.js",
+    "start-prod": "env PGUSER=postgres PGHOST=better-climbing-db.c7vcdoa3jr7x.eu-west-1.rds.amazonaws.com PGPASSWORD=betterClimbing96! PGDATABASE=betterClimbing PGPORT=5432 node src/app.js",
+    "init-db": "cd scripts && sh init-db.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awoods321/coachr-api.git"
+  },
+  "author": "Andrew Woods",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awoods321/coachr-api/issues"
+  },
+  "homepage": "https://github.com/awoods321/coachr-api#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.1101.0",
+    "cross-env": "^7.0.3",
+    "express-validator": "^6.14.0",
+    "uuid": "^3.4.0"
+  }
+}
